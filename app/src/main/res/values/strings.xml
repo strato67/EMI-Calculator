@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">EMI Calculator</string>
+    <string name="company_name">Saaransh Bank</string>
+    <string name="fragment_one_name">Mortgage Payment Calculator</string>
+    <string name="fragment_two_name">My Payment Results</string>
+    <string name="payment_title">Monthly Payment Amount</string>
+    <string name="mortgage_amount">Mortgage amount:</string>
+    <string name="interest_amount">Interest rate:</string>
+    <string name="amortization_amount">Amortization period:</string>
+    <string name="principal_prompt">Mortgage principal amount</string>
+    <string name="interest_prompt">Interest rate</string>
+    <string name="amortization_prompt">Amortization period</string>
+    <string name="principal_hint">Enter amount</string>
+    <string name="interest_hint">Enter your rate</string>
+    <string name="amortization_hint">Enter your term in years</string>
+    <string name="submit_text">Calculate my payments</string>
+    <string name="recalculate_text">Recalculate</string>
+    <string name="default_calculation">$0.00</string>
+</resources>
