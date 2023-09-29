@@ -30,7 +30,7 @@ public class PaymentCalculation implements Serializable {
 
     public double calculatePayment() {
         double monthlyRate = interestRate / 12 / 100;
-        double adjustedAmortization = amortizationPeriod*12;
+        double adjustedAmortization = amortizationPeriod * 12;
         double interestFormatter = Math.pow(1 + (monthlyRate), adjustedAmortization);
         return (principalPayment * monthlyRate * interestFormatter) / (interestFormatter - 1);
     }

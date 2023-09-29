@@ -95,8 +95,6 @@
 
     </LinearLayout>
 
-
-
     <Button
         android:id="@+id/submit_btn"
         android:layout_width="match_parent"

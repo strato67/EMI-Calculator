@@ -17,7 +17,6 @@
         android:textSize="24sp"
         app:layout_constraintTop_toTopOf="parent" />
 
-
     <LinearLayout
         android:id="@+id/payment_container"
         android:layout_width="match_parent"
@@ -28,10 +27,7 @@
         android:minHeight="48dp"
         android:orientation="vertical"
         android:padding="20dp"
-
-        app:layout_constraintTop_toBottomOf="@+id/page_title"
-
-        >
+        app:layout_constraintTop_toBottomOf="@+id/page_title">
 
         <TextView
             android:id="@+id/total_text"
@@ -57,54 +53,50 @@
         android:id="@+id/details_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/payment_container"
-        android:gravity="center"
         android:layout_marginTop="32dp"
+        android:gravity="center"
         android:orientation="horizontal"
         android:padding="20dp"
-        >
+        app:layout_constraintTop_toBottomOf="@+id/payment_container">
 
         <LinearLayout
             android:id="@+id/mortgage_container"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="start"
-            android:orientation="vertical"
-
-            >
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="18sp"
                 android:ellipsize="end"
                 android:maxLines="1"
+                android:paddingVertical="8dp"
                 android:text="@string/mortgage_amount"
-                android:paddingVertical="8dp"
-                />
+                android:textSize="18sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="18sp"
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:paddingVertical="8dp"
-                android:text="@string/interest_amount" />
+                android:text="@string/interest_amount"
+                android:textSize="18sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="18sp"
                 android:maxLines="1"
                 android:paddingVertical="8dp"
-                android:text="@string/amortization_amount" />
+                android:text="@string/amortization_amount"
+                android:textSize="18sp" />
 
         </LinearLayout>
 
         <Space
             android:layout_width="14dp"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
 
         <LinearLayout
             android:id="@+id/interest_container"
@@ -118,30 +110,30 @@
                 android:id="@+id/mortgageVal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="18sp"
                 android:ellipsize="end"
-                android:paddingVertical="8dp"
                 android:maxLines="1"
-                android:text="@string/default_calculation" />
+                android:paddingVertical="8dp"
+                android:text="@string/default_calculation"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/interestVal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="18sp"
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:paddingVertical="8dp"
-                android:text="@string/default_calculation" />
+                android:text="@string/default_calculation"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/amortizationVal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="18sp"
                 android:maxLines="1"
                 android:paddingVertical="8dp"
-                android:text="@string/default_calculation" />
+                android:text="@string/default_calculation"
+                android:textSize="18sp" />
 
 
         </LinearLayout>
@@ -153,25 +145,22 @@
         android:id="@+id/recalculate_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/recalculate_text"
         android:layout_marginTop="8dp"
-        android:padding="16sp"
-        android:textSize="16sp"
         android:backgroundTint="@color/TD_second"
-        app:layout_constraintTop_toBottomOf="@+id/details_container"
-        />
+        android:padding="16sp"
+        android:text="@string/recalculate_text"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/details_container" />
 
     <Button
         android:id="@+id/reminder_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/schedule_app"
         android:layout_marginTop="8dp"
-        android:padding="16sp"
-        android:textSize="16sp"
         android:backgroundTint="@color/TD"
-        app:layout_constraintTop_toBottomOf="@+id/recalculate_btn"
-        />
-
+        android:padding="16sp"
+        android:text="@string/schedule_app"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/recalculate_btn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

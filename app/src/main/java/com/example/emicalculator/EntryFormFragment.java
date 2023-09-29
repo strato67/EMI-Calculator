@@ -1,22 +1,18 @@
 package com.example.emicalculator;
 
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.navigation.NavController;
-import androidx.navigation.fragment.NavHostFragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.emicalculator.databinding.FragmentEntryFormBinding;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 
-import java.io.Serializable;
+import com.example.emicalculator.databinding.FragmentEntryFormBinding;
 
 
 public class EntryFormFragment extends Fragment {
@@ -26,8 +22,7 @@ public class EntryFormFragment extends Fragment {
     private EditText amortizatonField;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = FragmentEntryFormBinding.inflate(inflater, container, false);
         // Inflate the layout for this fragment
         return binding.getRoot();
@@ -41,7 +36,8 @@ public class EntryFormFragment extends Fragment {
         interestField = binding.interestRateField;
         amortizatonField = binding.amortizationField;
 
-       PaymentCalculation paymentCalculation = new PaymentCalculation();
+        //Instantiating paymentCalculation object
+        PaymentCalculation paymentCalculation = new PaymentCalculation();
 
         binding.submitBtn.setOnClickListener(v -> {
 
@@ -49,14 +45,17 @@ public class EntryFormFragment extends Fragment {
             String interestVal = interestField.getText().toString();
             String amortizatonVal = amortizatonField.getText().toString();
 
+            /*Create toast if user does not fill all fields, otherwise set values of
+             paymentCalculation and create new serialized Bundle to pass over to CalculationFragment
+             */
+
             if (principalVal.isEmpty() || interestVal.isEmpty() || amortizatonVal.isEmpty()) {
                 Toast.makeText(getContext(), "All fields are required.", Toast.LENGTH_SHORT).show();
             } else {
                 paymentCalculation.setValues(principalVal, interestVal, amortizatonVal);
                 Bundle bundle = new Bundle();
-                bundle.putSerializable("calculation",  paymentCalculation);
-                NavHostFragment.findNavController(EntryFormFragment.this)
-                        .navigate(R.id.action_FirstFragment_to_SecondFragment, bundle);
+                bundle.putSerializable("calculation", paymentCalculation);
+                NavHostFragment.findNavController(EntryFormFragment.this).navigate(R.id.action_FirstFragment_to_SecondFragment, bundle);
             }
 
         });
