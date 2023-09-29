@@ -14,6 +14,7 @@
     <string name="interest_hint">Enter your rate</string>
     <string name="amortization_hint">Enter your term in years</string>
     <string name="submit_text">Calculate my payments</string>
-    <string name="recalculate_text">Recalculate</string>
+    <string name="recalculate_text">New calculation</string>
+    <string name="schedule_app">Book an appointment</string>
     <string name="default_calculation">$0.00</string>
 </resources>

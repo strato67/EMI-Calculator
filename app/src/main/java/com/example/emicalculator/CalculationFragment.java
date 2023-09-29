@@ -1,15 +1,15 @@
 package com.example.emicalculator;
-
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-
+import androidx.navigation.fragment.NavHostFragment;
 import com.example.emicalculator.databinding.FragmentCalculationBinding;
 
 public class CalculationFragment extends Fragment {
@@ -55,6 +55,18 @@ public class CalculationFragment extends Fragment {
         mortgageText.setText(String.format("$%s", values[0]));
         interestText.setText(String.format("%s%%", values[1]));
         amortizationText.setText(String.format("%s year(s)", formattedAmortization));
+
+        binding.recalculateBtn.setOnClickListener(v -> {
+            NavHostFragment.findNavController(CalculationFragment.this)
+                    .navigate(R.id.action_SecondFragment_to_FirstFragment);
+        });
+
+        binding.reminderBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(Intent.ACTION_DIAL);
+            intent.setData(Uri.parse("tel:18662223456"));
+            startActivity(intent);
+
+        });
 
     }
 

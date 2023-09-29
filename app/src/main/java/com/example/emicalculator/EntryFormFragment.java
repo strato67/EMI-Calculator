@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.emicalculator.databinding.FragmentEntryFormBinding;
 
@@ -49,6 +50,7 @@ public class EntryFormFragment extends Fragment {
             String amortizatonVal = amortizatonField.getText().toString();
 
             if (principalVal.isEmpty() || interestVal.isEmpty() || amortizatonVal.isEmpty()) {
+                Toast.makeText(getContext(), "All fields are required.", Toast.LENGTH_SHORT).show();
             } else {
                 paymentCalculation.setValues(principalVal, interestVal, amortizatonVal);
                 Bundle bundle = new Bundle();

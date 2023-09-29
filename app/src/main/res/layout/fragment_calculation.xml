@@ -150,7 +150,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/submit_btn"
+        android:id="@+id/recalculate_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/recalculate_text"
@@ -159,6 +159,18 @@
         android:textSize="16sp"
         android:backgroundTint="@color/TD_second"
         app:layout_constraintTop_toBottomOf="@+id/details_container"
+        />
+
+    <Button
+        android:id="@+id/reminder_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/schedule_app"
+        android:layout_marginTop="8dp"
+        android:padding="16sp"
+        android:textSize="16sp"
+        android:backgroundTint="@color/TD"
+        app:layout_constraintTop_toBottomOf="@+id/recalculate_btn"
         />
 
 
